@@ -9,7 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// const mongoURI = 'mongodb+srv://rajdhiman469:sOkKdSeM9eOVkF0s@pageturner.hit7rsq.mongodb.net/pageturner?retryWrites=true&w=majority';
 const mongoURI = process.env.DB_URL;
 mongoose.connect(mongoURI)
 .then(() => console.log('MongoDB connected'))
